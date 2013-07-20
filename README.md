@@ -55,17 +55,17 @@ to pass callbacks to Crater events.
 
 **Example:**
 
-  Template.options.rendered = function() {
-    Crater.go(this);
-    Crater.events(this, {
+    Template.options.rendered = function() {
+      Crater.go(this);
+      Crater.events(this, {
 
-      'toggle .optionSwitch': function(e) {
-        ...
-      },
+        'toggle .optionSwitch': function(e) {
+          ...
+        },
 
-    });
+      });
 
-  }
+    }
 
 
 
