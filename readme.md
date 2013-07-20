@@ -8,7 +8,7 @@
 
 ------------------------------------------------------------
 
-#### `Crater.go(template)`
+## `Crater.go(template)`
 
 
 Use within `Template.x.rendered` function to initialize Crater UI elements
