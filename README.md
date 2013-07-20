@@ -8,9 +8,10 @@
 
 
 ## Base
-------------------------------------------------------------
 
-## `Crater.go(template)`
+## `Crater.go`
+
+`Crater.go(templateInstance)`
 
 
 Use within `Template.x.rendered` function to initialize Crater UI elements
@@ -26,7 +27,9 @@ used within tempalte instance.
 
 
 
-## `Crater.events(template, map)`
+## `Crater.events`
+
+`Crater.events(templateInstance, map)`
 
 Similar to `Template.x.events`. Use within `Template.x.rendered` function
 to pass callbacks to Crater events.
@@ -48,16 +51,19 @@ to pass callbacks to Crater events.
 
 
 
-## Forms
-------------------------------------------------------------
+## [Forms](https://github.com/subhog/meteor-crater-forms)
+
+
+
+## [Overlays, modals and alerts](https://github.com/subhog/meteor-crater-overlay)
+
+
+## [Remover – Two-step safety button](https://github.com/subhog/meteor-crater-remover)
+
+
+## [Toggle switch](https://github.com/subhog/meteor-crater-toggle)
 
 
 
 
-## Overlays
-------------------------------------------------------------
-
-
-## Elements
-------------------------------------------------------------
 
