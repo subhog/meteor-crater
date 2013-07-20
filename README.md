@@ -1,5 +1,23 @@
 
 
+# Crater UI Library for Meteor.js
+
+
+This is a growing library of common UI elements that can be reused acrosss Meteor applications.
+
+
+### Features:
+
+- Easy reusable forms
+    - Nested attributes
+    - Image element
+- Modals and overlays
+- Small useful elements
+    - Two-step safety button
+    - Toggle switch
+
+
+Feel free to contribute!
 
 
 
