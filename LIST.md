@@ -1,3 +1,5 @@
+# This doc is outdated, new version pending.
+
 ## Complete package list
 
 

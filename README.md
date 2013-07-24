@@ -1,4 +1,4 @@
-
+# This doc is outdated, new version pending.
 
 # Crater UI Library for Meteor.js
 
