@@ -1,1 +1,57 @@
-toggle.css
+.crater-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  color: #f0f0f0;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25) inset;
+  text-shadow: 0px 0px 2px rgba(0,0,0,0.25); 
+  cursor: default;
+}
+
+.crater-toggle:before {
+  content: '.';
+  font-size: 0px;
+  background-color: #f0f0f0;
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 2px;
+  border-radius: 13px;
+  
+
+  background-image: -moz-linear-gradient(top,     rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%); /* FF3.6+ */
+  background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top,       rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top,      rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom,    rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%); /* W3C */
+
+
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.15), 0px 0px 5px 2px rgba(240,240,240,1) inset;
+}
+
+.crater-toggle-on {
+  background: #80f000;
+  padding-left: 30px;
+}
+
+.crater-toggle-on:before {
+  left: 2px;
+  right: auto;
+}
+
+.crater-toggle-off {
+  background: #f04040;
+  padding-right: 30px;
+}
+
+.crater-toggle-off:before {
+  left: auto;
+  right: 2px;
+}
+
+

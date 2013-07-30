@@ -23,5 +23,14 @@ Package.on_use(function (api, where) {
     'forms/display/helper.js',
     'forms/inject/inject.js',
     'forms/fetch/fetch.js',
+
+
+    'css/alert.css',
+    'css/forms.css',
+    'css/remover.css',
+    'css/toggle.css',
+    
   ], 'client');
+
+
 });
