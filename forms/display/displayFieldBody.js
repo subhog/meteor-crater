@@ -1,12 +1,12 @@
 
 var filters = {
   html: function(value) {
-    return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replce(/>/g, '&gt;');
+    return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 };
 
 
-Crater.form._displayFieldBody = function(field) {
+Crater.forms._displayFieldBody = function(field) {
 
   var body = '';
   var groupClass = '';
@@ -45,7 +45,7 @@ Crater.form._displayFieldBody = function(field) {
     case 'multi':
     case 'multiItem':
     _.each(field.array, function(f) {
-      body += printField(f);
+      body += Crater.forms._displayFieldBody(f);
     });
     break;
   }
@@ -53,7 +53,7 @@ Crater.form._displayFieldBody = function(field) {
 
   return '<div class="crater-field-body' + groupClass + '">' +
             body +
-          '</div>' +  
+          '</div>';
 
 };
 

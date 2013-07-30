@@ -1,5 +1,5 @@
 
-Crater.form._displayFieldHeader = function(field) {
+Crater.forms._displayFieldHeader = function(field) {
 
   var header = '';
   switch(field.type) {
@@ -22,7 +22,7 @@ Crater.form._displayFieldHeader = function(field) {
 
   return  '<div class="crater-field-header">' +
             field.label + header +
-          '</div>' +
+          '</div>';
 
 };
 

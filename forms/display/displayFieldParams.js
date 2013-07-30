@@ -1,8 +1,8 @@
 
-Crater.form._displayFieldParams = function(field) {
+Crater.forms._displayFieldParams = function(field) {
 
   if(field.type === 'multiItem') {
-    return ' class="crater-field-box crater-form-' + field.klass + '" ' +;
+    return ' class="crater-field-box crater-form-' + field.klass + '" ' +
            ' data-idx="' + field.idx + '" ' +
            ' data-prefix="' + field.prefix + '" ' + 
            ' data-param="' + field.param + '" ';

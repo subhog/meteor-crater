@@ -1,6 +1,6 @@
 
 
-Crater.inject = function(formMap, data, params) {
+Crater.forms.inject = function(formMap, data, params) {
 
   var result = [];
 
@@ -15,7 +15,7 @@ Crater.inject = function(formMap, data, params) {
     };
 
     if(f.type === 'group') {
-      field.array = Crater.injectFormValues(f.array, data, params);
+      field.array = Crater.forms.inject(f.array, data, params);
     } else if(f.type === 'multi') {
 
       var valueArray = Crater.forms.getValue(data, f.param);
@@ -31,7 +31,7 @@ Crater.inject = function(formMap, data, params) {
           klass: params.prefix + '-' + Crater.forms.undot(f.param) || '',
         };
 
-        fieldItem.array = Crater.injectFormValues(f.array, valueItem, {
+        fieldItem.array = Crater.forms.inject(f.array, valueItem, {
           prefix: params.prefix + '-' + Crater.forms.undot(f.param) + '---' + idx + '---',
           imageUrl: params.imageUrl,
           // idx: idx,
@@ -39,7 +39,7 @@ Crater.inject = function(formMap, data, params) {
 
         field.array.push(fieldItem);
       });
-      // field.array = Crater.injectFormValues(f.array)
+      
 
     } else if(f.type === 'image') {
       field.value = Crater.forms.getValue(data, f.param);
