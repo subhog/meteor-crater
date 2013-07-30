@@ -6,7 +6,7 @@ var injectField = function(target, form, prefix, field, dbg) {
       injectField(target, form, prefix, f);
     });
   } else if(field.type === 'multi') {
-    var selector = '.craterForm-' + prefix + '-' + Crater.forms.undot(field.param);
+    var selector = '.crater-form-' + prefix + '-' + Crater.forms.undot(field.param);
 
     var array = [];
     $(form).find(selector).each(function(idx, formPart) {
@@ -22,7 +22,7 @@ var injectField = function(target, form, prefix, field, dbg) {
     target[field.param] = array;
     
   } else {
-    target[field.param] = $(form).find('#craterForm-' + prefix + '-' + Crater.forms.undot(field.param)).val();
+    target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param)).val();
   }
 
 };

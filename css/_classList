@@ -32,8 +32,6 @@ REMOVER
 
 FORMS
 
-  crater-form
-
   * crater-field-trigger
   crater-field-box
   crater-field-header
@@ -45,5 +43,3 @@ FORMS
   * crater-field-multi-remove-button
   * crater-field-image-change-button
   crater-field-image-preview
-
-  
