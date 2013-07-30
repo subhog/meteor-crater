@@ -45,7 +45,7 @@ Crater.forms._displayFieldBody = function(field) {
     case 'multi':
     case 'multiItem':
     _.each(field.array, function(f) {
-      body += Crater.forms._displayFieldBody(f);
+      body += Crater.forms._displayField(f);
     });
     break;
   }
