@@ -28,6 +28,8 @@ Crater.forms._displayFieldBody = function(field) {
 
   switch(field.type) {
     case 'text':
+    case 'number':
+    case 'datetime':
     body =  '<input type="text" class="crater-field-trigger" '+
             'id="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" value="' + value + '"/>';
     break;

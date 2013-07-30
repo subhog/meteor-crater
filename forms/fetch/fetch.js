@@ -23,6 +23,11 @@ var injectField = function(target, form, prefix, field, dbg) {
     
   } else {
     target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param)).val();
+    if(field.type === 'datetime') {
+      target[field.param] = new Date(target[field.param]);
+    } else if(field.type === 'number') {
+      target[field.param] = + target[field.param];
+    }
   }
 
 };

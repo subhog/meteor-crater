@@ -27,7 +27,7 @@ var removeMultiEvent = function(e) {
 };
 
 var saveEvent = _.debounce(function(e) {
-  $(e.target).closest('.crater-form').trigger('save');
+  $(e.target).closest('.crater-form').trigger('changed');
 }, 500);
 
 
