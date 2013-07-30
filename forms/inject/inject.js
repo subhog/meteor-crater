@@ -1,6 +1,5 @@
 
 
-
 Crater.inject = function(formMap, data, params) {
 
   var result = [];

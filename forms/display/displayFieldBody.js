@@ -3,9 +3,7 @@ var filters = {
   html: function(value) {
     return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replce(/>/g, '&gt;');
   }
-
-
-}
+};
 
 
 Crater.form._displayFieldBody = function(field) {

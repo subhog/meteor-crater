@@ -1,5 +1,4 @@
 
-
 var changeImageEvent = function(e) {
   var form = $(e.target).closest('.crater-form');
   var fieldBox = $(e.target).closest('.crater-field-box');
@@ -52,3 +51,9 @@ Crater.forms.setup = function(template, params) {
   });;
 
 };
+
+
+
+
+
+
