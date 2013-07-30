@@ -13,10 +13,15 @@ Package.on_use(function (api, where) {
 
     'overlays/overlay.js',
 
+
     'forms/_.js',
-    'forms/setup.js',
-    'forms/craterForm_helper.js',
-    'forms/injectFormValues.js',
-    'forms/build.js',
+    'forms/events/setup.js',
+    'forms/display/displayField.js',
+    'forms/display/displayFieldParams.js',
+    'forms/display/displayFieldHeader.js',
+    'forms/display/displayFieldBody.js',
+    'forms/display/helper.js',
+    'forms/inject/inject.js',
+    'forms/fetch/fetch.js',
   ], 'client');
 });
