@@ -7,7 +7,6 @@ Crater._items['crater-remover'] = function(element) {
   element.addClass('crater');
 
   element.click(function(event) {
-    console.log("DELETE CLICK");
     if(element.is('.crater-activated')) {
       element.trigger('confirm');
     } else {
