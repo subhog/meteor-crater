@@ -1,12 +1,8 @@
 
 
-
-Crater.drawOverlay = function(template, data, callback) {
-  
+Crater._drawOverlay = function(html, data, callback) {
   /* Create DOM fragment */
-  var frag = Meteor.render(function() {
-    return '<div>' + Template[template](data) + '</div>';
-  });
+  var frag = Meteor.render(html);
 
   /* Create and set up overlay */
   var div = document.createElement('div');
@@ -26,7 +22,12 @@ Crater.drawOverlay = function(template, data, callback) {
   $('body').append(div);
   jdiv.fadeIn(300);
   return jdiv;
+};
 
+Crater.drawOverlay = function(template, data, callback) {
+  Crater._drawOverlay(function() {
+    return '<div>' + Template[template](data) + '</div>';
+  }, data, callback);
 };
 
 
