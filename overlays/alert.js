@@ -29,7 +29,13 @@ var alertFooter = function(options) {
 
 Crater.alert = function(options, callback) {
   
-  var html = '<div class="crater-alert-box">' + alertHeader(options) + alertBody(options) + alertFooter(options) + '</div>';
+  var html = '';
+  if(typeof options === 'string') {
+    html = '<div class="crater-alert-box">' + alertBody({message: options}) + '</div>';
+  } else {
+    html = '<div class="crater-alert-box">' + alertHeader(options) + alertBody(options) + alertFooter(options) + '</div>';
+  }
+
   Crater._drawOverlay(html, null, callback)
     .find('.crater-alert-button')
     .on('click', function(e) {
