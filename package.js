@@ -12,7 +12,7 @@ Package.on_use(function (api, where) {
     'components/toggle.js',
 
     'overlays/overlay.js',
-
+    'overlays/alert.js',
 
     'forms/_.js',
     'forms/events/setup.js',
