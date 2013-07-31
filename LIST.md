@@ -12,8 +12,8 @@ ALERTS
   crater-alert-closer
   crater-alert-body
   crater-alert-footer
-  crater-alert-footer-button
-  crater-alert-footer-button-action
+  crater-alert-button
+  crater-alert-button-action
 
 
 TOGGLE

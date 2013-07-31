@@ -13,6 +13,7 @@ Package.on_use(function (api, where) {
 
     'overlays/overlay.js',
     'overlays/alert.js',
+    'overlays/confirm.js',
 
     'forms/_.js',
     'forms/events/setup.js',
