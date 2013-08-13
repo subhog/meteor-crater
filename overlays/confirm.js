@@ -30,7 +30,7 @@ Crater.confirm = function(options, callback) {
   
   var html = '';
   if(typeof options === 'string') {
-    html = '<div class="crater-alert-box">' + alertBody({message: options}) + alertFooter(options) + '</div>';
+    html = '<div class="crater-alert-box">' + alertBody({message: options}) + alertFooter({}) + '</div>';
   } else {
     html = '<div class="crater-alert-box">' + alertHeader(options) + alertBody(options) + alertFooter(options) + '</div>';
   }
