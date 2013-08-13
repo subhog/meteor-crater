@@ -1,9 +1,9 @@
 
-var filters = {
-  html: function(value) {
-    return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
-};
+// var filters = {
+//   html: function(value) {
+//     return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+//   }
+// };
 
 
 Crater.forms._displayFieldBody = function(field) {
@@ -13,12 +13,13 @@ Crater.forms._displayFieldBody = function(field) {
 
   var value = field.value;
   if(value === null || value === undefined) value = ''; 
+  value = _.escape(value);
 
-  if(field.filters) {
-    _.each(field.filters, function(filter) {
-      if(filters[filter]) value = filters[filter](value);
-    });
-  }
+  // if(field.filters) {
+  //   _.each(field.filters, function(filter) {
+  //     if(filters[filter]) value = filters[filter](value);
+  //   });
+  // }
 
   switch(field.type) {
     case 'group':
