@@ -59,8 +59,8 @@ Crater.forms._displayFieldBody = function(field) {
               (val.checked ? 'checked' : '' ) +
               '>';
       body += '<label ' +
-              'name="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" ' +
-              'value="' + val.value + '" ' +
+              'for="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '-' + Crater.forms.undot(val.value) + '" ' +
+              // 'value="' + val.value + '" ' +
               '>' + val.label + '</label>';
       
     });
