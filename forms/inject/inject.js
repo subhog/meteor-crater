@@ -10,6 +10,7 @@ Crater.forms.inject = function(formMap, data, params) {
       param: f.param,
       type: f.type,
       value: '',
+      values: f.values,
       prefix: params.prefix || '',
       filters: f.filters,
     };
@@ -48,6 +49,15 @@ Crater.forms.inject = function(formMap, data, params) {
         field.src = params.imageUrl(Crater.forms.getValue(data, f.param));
       else
         field.src = Crater.forms.getValue(data, f.param);
+    } else if(f.type === 'radio') {
+      var val = Crater.forms.getValue(data, f.param);
+      _.each(field.values, function(v) {
+        if(v.value === val) {
+          v.checked = true;
+        } else {
+          v.checked = false;
+        }
+      });
     } else {
       field.value = Crater.forms.getValue(data, f.param);
     }

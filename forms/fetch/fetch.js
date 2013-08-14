@@ -21,8 +21,19 @@ var injectField = function(target, form, prefix, field, dbg) {
 
     target[field.param] = array;
     
+  } else if(field.type === 'radio') {
+
+    // console.log("FETCHING", field);
+    _.each(field.values, function(val) {
+      var f = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '-' + Crater.forms.undot(val.value) + '');
+      // console.log(f, f.is(':checked'));
+      if(f.is(':checked')) {
+        target[field.param] = val.value;
+      }
+    });
+
   } else {
-    target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param)).val();
+    target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '').val();
     if(field.type === 'datetime') {
       target[field.param] = new Date(target[field.param]);
     } else if(field.type === 'number') {

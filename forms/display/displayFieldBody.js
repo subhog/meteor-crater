@@ -44,6 +44,28 @@ Crater.forms._displayFieldBody = function(field) {
             '<input type="hidden" '+
             'id="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" value="' + value + '"/>';
     break;
+    case 'radio':
+    body = '';
+    _.each(field.values, function(value) {
+      var val = value;
+      if(typeof val === 'string') {
+        val = {label: value, value: value};
+      }
+      body += '<input type="radio" ' +
+              'class="crater-field-trigger" ' +
+              'name="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" ' +
+              'id="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '-' + Crater.forms.undot(val.value) + '" ' +
+              'value="' + val.value + '" ' +
+              (val.checked ? 'checked' : '' ) +
+              '>';
+      body += '<label ' +
+              'name="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" ' +
+              'value="' + val.value + '" ' +
+              '>' + val.label + '</label>';
+      
+    });
+    break;
+    break;
     case 'group':
     case 'multi':
     case 'multiItem':

@@ -38,6 +38,7 @@ var setupForm = function(form, params) {
 
   $(form).find('.crater-field-image-change-button').click(changeImageEvent);
   $(form).find('.crater-field-trigger').on('keyup', saveEvent);
+  $(form).find('.crater-field-trigger').on('change', saveEvent);
   $(form).find('.crater-field-multi-add-button').click(addMultiEvent);
   $(form).find('.crater-field-multi-remove-button').click(removeMultiEvent);
   // .each(function(idx, button) {
