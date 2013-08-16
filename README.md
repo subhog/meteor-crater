@@ -12,7 +12,7 @@ Highlights:
 - Stylizable alerts
 
 
-## Documentation
+## Documentation and examples
 
 Documentation can be found at [http://subhog.github.io/meteor-crater-api](http://subhog.github.io/meteor-crater-api).
 

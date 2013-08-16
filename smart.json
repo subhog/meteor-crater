@@ -1,6 +1,6 @@
 {
   "name": "crater",
-  "description": "Complete UI Library for Meteor",
+  "description": "Handy UI Library for Meteor",
   "homepage": "https://github.com/subhog/meteor-crater",
   "author": "Hubert Orlik Grzesik <hubert@orlikarnia.com>",
   "version": "0.5.1",
