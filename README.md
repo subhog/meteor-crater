@@ -1,7 +1,7 @@
 
 ## Crater UI Library for Meteor.js
 
-This is a small, but growing library of common UI elements
+Crater is a small, but growing library of common UI elements
 that can be reused acrosss Meteor applications.
 
 Highlights:
@@ -24,7 +24,8 @@ Documentation can be found at [http://subhog.github.io/meteor-crater-api](http:/
 For working examples, see sample project at [http://subhog.github.io/meteor-crater-demo](http://subhog.github.io/meteor-crater-demo).
 
 See the sample project in action at [http://crater-demo.herokuapp.com/](http://crater-demo.herokuapp.com/).
-It may take a minute to load due to heroku sleeping.
+It may take a minute to load due to workers sleeping at Heroku.
 
 Source of the API is available for contributing at 
 [https://github.com/subhog/meteor-crater-api](https://github.com/subhog/meteor-crater-api)
+
