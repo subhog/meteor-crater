@@ -10,8 +10,9 @@ var alertHeader = function(options) {
 };
 
 var alertBody = function(options) {
-  return _.template('<div class="crater-alert-body"><%= message %><div><input type="text"/></div></div>', {
+  return _.template('<div class="crater-alert-body"><%= message %><div><input type="text" value="<%= value %>"/></div></div>', {
     message: options.message || '',
+    value: options.value || '',
   });
 };
 
