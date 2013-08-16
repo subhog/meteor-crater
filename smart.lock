@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "crater": {
+        "path": "."
+      }
+    },
+    "packages": {
+      "crater": {
+        "path": "."
+      }
+    }
+  }
+}

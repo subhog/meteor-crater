@@ -5,8 +5,12 @@ Package.describe({
 
 Package.on_use(function (api, where) {
 
-  //api.use('underscore');
+  if(api.export) {
 
+    api.use(['underscore', 'handlebars'], 'client');
+    api.export('Crater', 'client');
+    
+  }
 
 
   api.add_files([
@@ -38,9 +42,9 @@ Package.on_use(function (api, where) {
     
   ], 'client');
 
-  api.export('Crater');
 
 });
+
 
 
 
