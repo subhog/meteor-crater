@@ -19,13 +19,26 @@ To add Crater to your project, simply run `mrt add crater`.
 
 ## Documentation and examples
 
-Documentation can be found at [http://subhog.github.io/meteor-crater-api](http://subhog.github.io/meteor-crater-api).
+Documentation can be found at:
+[http://subhog.github.io/meteor-crater-api](http://subhog.github.io/meteor-crater-api).
 
-For working examples, see sample project at [http://subhog.github.io/meteor-crater-demo](http://subhog.github.io/meteor-crater-demo).
+For working examples, see sample project at:
+[http://subhog.github.io/meteor-crater-demo](http://subhog.github.io/meteor-crater-demo).
 
-See the sample project in action at [http://crater-demo.herokuapp.com/](http://crater-demo.herokuapp.com/).
-It may take a minute to load due to workers sleeping at Heroku.
+See the sample project in action at:
+[http://crater-demo.herokuapp.com/](http://crater-demo.herokuapp.com/).
+Notice that it may take a minute to load due to workers sleeping at Heroku.
 
-Source of the API is available for contributing at 
+
+## Project
+
+The project is available on Github:
+[http://subhog.github.io/meteor-crater](http://subhog.github.io/meteor-crater).
+
+Source of the API is available for contributing at:
 [https://github.com/subhog/meteor-crater-api](https://github.com/subhog/meteor-crater-api)
+
+Page on Atmosphere:
+[https://atmosphere.meteor.com/package/crater](https://atmosphere.meteor.com/package/crater)
+
 
