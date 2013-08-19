@@ -1,6 +1,16 @@
 
 
-Crater._drawOverlay = function(html, data, callback) {
+/*
+  # options
+
+  data
+  divClass
+  overlayClass
+
+*/
+
+Crater._drawOverlay = function(html, options, callback) {
+  options = options || {};
   /* Create DOM fragment */
   var frag = Meteor.render(html);
 
@@ -8,6 +18,11 @@ Crater._drawOverlay = function(html, data, callback) {
   var div = document.createElement('div');
   var jdiv = $(div);
   jdiv.addClass('crater-overlay');
+  if(options.overlayClass) {
+    if(options.overlayClass.type === 'string') {
+      jdiv.addClass(overlayClass);
+    }
+  }
   jdiv.append(frag);
   jdiv.hide();
   jdiv.click(function(e) {
@@ -24,10 +39,16 @@ Crater._drawOverlay = function(html, data, callback) {
   return jdiv;
 };
 
-Crater.overlay = function(template, data, callback) {
+Crater.overlay = function(template, options, callback) {
+  options = options || {};
+
+
   Crater._drawOverlay(function() {
-    return '<div>' + Template[template](data) + '</div>';
-  }, data, callback);
+    var d = '<div>';
+    if(options.divClass) d = '<div class="'+options.divClass+'">';
+
+    return d + Template[template](options.data) + '</div>';
+  }, options, callback);
 };
 
 
