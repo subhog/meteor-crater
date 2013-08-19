@@ -19,7 +19,7 @@ Crater._drawOverlay = function(html, options, callback) {
   var jdiv = $(div);
   jdiv.addClass('crater-overlay');
   if(options.overlayClass) {
-    if(options.overlayClass.type === 'string') {
+    if(typeof options.overlayClass === 'string') {
       jdiv.addClass(overlayClass);
     }
   }
