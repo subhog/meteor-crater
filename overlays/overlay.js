@@ -35,7 +35,12 @@ Crater._drawOverlay = function(html, options, callback) {
 
   /* Display */
   $('body').append(div);
-  jdiv.fadeIn(300);
+  if(options.animateIn) {
+    options.animateIn(div);
+  } else {
+    jdiv.fadeIn(300);  
+  }
+  if(options.animateOut) div.__craterAnimateOut = options.animateOut;
   return jdiv;
 };
 
@@ -62,9 +67,16 @@ Crater.dismissOverlay = function(element, error, data) {
   }
 
   /* Dismiss */
-  overlay.fadeOut(300, function(){
-    overlay.remove();
-  });
+  if(overlay.get()[0].__craterAnimateOut) {
+    overlay.get()[0].__craterAnimateOut(overlay.get()[0], function() {
+      overlay.remove();
+    });
+  } else {
+    overlay.fadeOut(300, function(){
+      overlay.remove();
+    });  
+  }
+  
 };
 
 
