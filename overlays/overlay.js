@@ -20,7 +20,7 @@ Crater._drawOverlay = function(html, options, callback) {
   jdiv.addClass('crater-overlay');
   if(options.overlayClass) {
     if(typeof options.overlayClass === 'string') {
-      jdiv.addClass(overlayClass);
+      jdiv.addClass(options.overlayClass);
     }
   }
   jdiv.append(frag);
