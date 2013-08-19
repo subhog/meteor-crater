@@ -3,7 +3,7 @@
   "description": "Handy UI Library for Meteor",
   "homepage": "https://github.com/subhog/meteor-crater",
   "author": "Hubert Orlik Grzesik <hubert@orlikarnia.com>",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "git": "https://github.com/subhog/meteor-crater.git",
   "packages": {
     
