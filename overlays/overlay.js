@@ -24,7 +24,7 @@ Crater._drawOverlay = function(html, data, callback) {
   return jdiv;
 };
 
-Crater.drawOverlay = function(template, data, callback) {
+Crater.overlay = function(template, data, callback) {
   Crater._drawOverlay(function() {
     return '<div>' + Template[template](data) + '</div>';
   }, data, callback);
