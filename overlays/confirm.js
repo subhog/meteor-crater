@@ -35,10 +35,10 @@ Crater.confirm = function(options, callback) {
     html = '<div class="crater-alert-box">' + alertHeader(options) + alertBody(options) + alertFooter(options) + '</div>';
   }
 
-  return Crater._drawOverlay(html, null, callback)
-    .find('.crater-alert-button')
-    .on('click', function(e) {
-      Crater.dismissOverlay(e.target, null, $(e.target).is('.crater-alert-button-action'));
-    });
-
+  var overlay = Crater._drawOverlay(html, null, callback);
+  overlay.find('.crater-alert-button')
+          .on('click', function(e) {
+            Crater.dismissOverlay(e.target, null, $(e.target).is('.crater-alert-button-action'));
+          });
+  return overlay;
 };

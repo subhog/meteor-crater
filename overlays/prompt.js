@@ -40,8 +40,8 @@ Crater.prompt = function(options, callback) {
     html = '<div class="crater-alert-box">' + alertHeader(options) + alertBody(options) + alertFooter(options) + '</div>';
   }
 
-  return Crater._drawOverlay(html, null, callback)
-    .find('.crater-alert-button')
+  var overlay = Crater._drawOverlay(html, null, callback);
+  overlay.find('.crater-alert-button')
     .on('click', function(e) {
       if(! $(e.target).is('.crater-alert-button-action')) {
         Crater.dismissOverlay(e.target, null, null);
@@ -49,5 +49,5 @@ Crater.prompt = function(options, callback) {
         Crater.dismissOverlay(e.target, null, {value: $(e.target).closest('.crater-alert-box').find('input:text').val()});
       }
     });
-
+  return overlay;
 };
