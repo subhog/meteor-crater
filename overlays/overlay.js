@@ -48,7 +48,7 @@ Crater.overlay = function(template, options, callback) {
   options = options || {};
 
 
-  Crater._drawOverlay(function() {
+  return Crater._drawOverlay(function() {
     // var d = '<div>';
     // if(options.divClass) d = '<div class="'+options.divClass+'">';
     return Template[template](options.data);

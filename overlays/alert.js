@@ -36,7 +36,7 @@ Crater.alert = function(options, callback) {
     html = '<div class="crater-alert-box">' + alertHeader(options) + alertBody(options) + alertFooter(options) + '</div>';
   }
 
-  Crater._drawOverlay(html, null, callback)
+  return Crater._drawOverlay(html, null, callback)
     .find('.crater-alert-button')
     .on('click', function(e) {
       Crater.dismissOverlay(e.target);
