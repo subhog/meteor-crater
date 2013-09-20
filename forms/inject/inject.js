@@ -58,6 +58,8 @@ Crater.forms.inject = function(formMap, data, params) {
           v.checked = false;
         }
       });
+    } else if(f.type === 'checkbox') {
+      field.value = Crater.forms.getValue(data, f.param);
     } else {
       field.value = Crater.forms.getValue(data, f.param);
     }
