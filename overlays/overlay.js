@@ -25,10 +25,12 @@ Crater._drawOverlay = function(html, options, callback) {
   }
   jdiv.append(frag);
   jdiv.hide();
-  jdiv.click(function(e) {
-    if(e.target === div)
-      Crater.dismissOverlay(div);
-  });
+  if(!options.modal) {
+    jdiv.click(function(e) {
+      if(e.target === div)
+        Crater.dismissOverlay(div);
+    });
+  }
 
   /* Set up callback */
   div.__craterCallback = callback;
