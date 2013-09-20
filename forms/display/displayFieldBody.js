@@ -45,10 +45,11 @@ Crater.forms._displayFieldBody = function(field) {
             'id="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" value="' + value + '"/>';
     break;
     case 'checkbox':
-    body =  '<input type="text" class="crater-field-trigger" '+
+    body =  '<input type="checkbox" class="crater-field-trigger" '+
             'id="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" ' +
             ((field.value) ? 'checked' : '') +
             '/>';
+    break;
     case 'radio':
     body = '';
     _.each(field.values, function(value) {
