@@ -63,6 +63,8 @@ Crater.dismissOverlay = function(element, error, data) {
   /* Get overlay */
   var overlay = $(element).closest('.crater-overlay');
 
+  if(!overlay || !overlay.get() || !overlay.get()[0]) return;
+
   /* Callback */
   if(overlay.get()[0].__craterCallback) {
     overlay.get()[0].__craterCallback(error, data);
