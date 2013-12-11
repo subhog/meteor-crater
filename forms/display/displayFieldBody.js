@@ -29,7 +29,9 @@ Crater.forms._displayFieldBody = function(field) {
 
   switch(field.type) {
     case 'label':
-    body = '' + value;
+    body = '' + value + 
+          '<input type="hidden" '+
+          'id="crater-form-' + field.prefix + '-' + Crater.forms.undot(field.param) + '" value="' + value + '"/>';
     break;
     case 'text':
     case 'number':
