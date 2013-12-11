@@ -34,6 +34,7 @@ var injectField = function(target, form, prefix, field, dbg) {
 
   } else if(field.type === 'checkbox') {
     target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '').is(':checked');
+  } else if(field.type === 'label') {
   } else {
     target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '').val();
     if(field.type === 'datetime') {

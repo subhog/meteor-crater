@@ -28,6 +28,9 @@ Crater.forms._displayFieldBody = function(field) {
   }
 
   switch(field.type) {
+    case 'label':
+    body = '' + value;
+    break;
     case 'text':
     case 'number':
     case 'datetime':
