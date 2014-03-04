@@ -1,0 +1,213 @@
+.crater-datetime-box {
+  display: inline-block;
+}
+
+.crater-datetime-field {
+  position: relative;
+  display: inline-block;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 0px;
+}
+
+.crater-datetime-value {
+  display: inline-block;
+  height: 28px;
+  width: 215px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 14px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  vertical-align: top;
+  color: #606060;
+}
+
+.crater-datetime-button {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  width: 35px;
+  font-size: 16px;
+  background: #f0f0f0;
+  color: #909090;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  vertical-align: top;
+  cursor: default;
+}
+
+.crater-datetime-chooser {
+  position: absolute;
+  background: #f0f0f0;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.crater-datetime-year-box, .crater-datetime-month-box, .crater-datetime-day-box, .crater-datetime-time-box {
+  width: 250px;
+
+  text-align: center;
+  font-size: 0px;
+  padding: 10px 0px;
+}
+
+.crater-datetime-year-pill {
+  display: inline-block;
+  border-radius: 20px;
+  height: 24px;
+  line-height: 24px;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+
+}
+
+.crater-datetime-year-left, .crater-datetime-year-right {
+  display: inline-block;
+  font-size: 12px;
+  cursor: default;
+  width: 30px;
+  text-align: center;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+  color: #909090
+}
+
+.crater-datetime-year-left:hover, .crater-datetime-year-right:hover {
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.5) inset;
+}
+
+.crater-datetime-year-left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.crater-datetime-year-right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+input[type=text].crater-datetime-year-field {
+  font-size: 12px;
+  width: 100px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  padding: 0px;
+  border: 0px;
+  /*border-radius: 0px;*/
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #909090;
+}
+
+.crater-datetime-button-current {
+  background: #ffffff;
+}
+
+.crater-datetime-month-button, .crater-datetime-day-button-active, .crater-datetime-chooser-button {
+  display: inline-block;
+  text-align: center;
+  
+  font-size: 12px;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+
+  color: #909090;
+  cursor: default;
+}
+
+.crater-datetime-month-button:hover, .crater-datetime-day-button-active:hover, .crater-datetime-chooser-button:hover {
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.5) inset;
+}
+
+
+.crater-datetime-day-subbox {
+  display: inline-block;
+  text-align: left;
+  width: 238px;
+}
+
+
+.crater-datetime-month-button {
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.crater-datetime-day-button {
+  vertical-align: top;
+  width: 34px;
+  height: 24px;
+  line-height: 24px;
+
+  display: inline-block;
+  text-align: center;
+  
+  font-size: 12px;
+
+  color: #909090;
+  cursor: default;
+}
+
+.crater-datetime-day-button-active {
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+}
+
+
+
+.crater-datetime-chooser-button {
+  width: 40px;
+  height: 26px;
+  line-height: 26px;
+}
+
+input[type=text].crater-datetime-time-field {
+  font-size: 12px;
+  width: 120px;
+  text-align: center;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px;
+  border: 0px;
+  /*border-radius: 0px;*/
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.125) inset;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #909090;
+  margin: 0px;
+}
+
+.crater-datetime-time-hp {
+  border-top-left-radius: 10px;
+}
+
+.crater-datetime-time-mp {
+  border-top-right-radius: 10px;
+}
+
+.crater-datetime-time-hm {
+  border-bottom-left-radius: 10px;
+}
+
+.crater-datetime-time-mm {
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+

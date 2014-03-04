@@ -1,0 +1,65 @@
+<template name="__crater_template__datetime__">
+
+  <div class="crater-datetime-box">    
+    {{#if id}}
+      <input type="hidden"
+          {{#if trigger}}class="crater-field-trigger"{{/if}}
+          id="{{id}}"
+          value="{{displayRaw}}"/>
+    {{/if}}
+    <div class="crater-datetime-field">   
+      <div class="crater-datetime-value">{{display}}</div>
+      <div class="crater-datetime-button">
+        {{#if hidden}}&#x25bc;&nbsp;{{else}}&#x25b2;&nbsp;{{/if}}
+      </div>
+    </div>   
+    <div class="crater-datetime-chooser" {{#if hidden}}style="display: none;"{{/if}}>   
+      
+      <div class="crater-datetime-year-box">
+        <div class="crater-datetime-year-pill">
+          <div class="crater-datetime-year-left">&#x25c4;</div>   
+          <input name="crater-datetime-year-field-{{chooserId}}" type="text" class="crater-datetime-year-field" value="{{year}}"/>   
+          <div class="crater-datetime-year-right">&#x25ba;</div>   
+        </div>
+      </div>
+
+
+      <div class="crater-datetime-month-box">  
+        {{#each months}}
+          <div class="crater-datetime-month-button {{#if current}}crater-datetime-button-current{{/if}}" data-month="{{idx}}">{{label}}</div>
+        {{/each}}
+      </div>
+
+
+      <div class="crater-datetime-day-box">
+        <div class="crater-datetime-day-subbox">
+          {{#each days}}
+            <div class="crater-datetime-day-button {{#if current}}crater-datetime-button-current{{/if}} {{#if active}}crater-datetime-day-button-active{{/if}}"
+                 data-day="{{idx}}">{{label}}</div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="crater-datetime-time-box">
+        <div>
+          <div class="crater-datetime-chooser-button crater-datetime-time-hp" data-minutes="60">+H</div>
+          <div class="crater-datetime-chooser-button crater-datetime-time-pp" data-minutes="10">+10</div>
+          <div class="crater-datetime-chooser-button crater-datetime-time-mp" data-minutes="1">+1</div>
+        </div>
+        <div>
+          <input name="crater-datetime-time-field-{{chooserId}}" type="text" class="crater-datetime-time-field" value="{{displayTime}}"/>
+        </div>
+        <div>
+          <div class="crater-datetime-chooser-button crater-datetime-time-hm" data-minutes="-60">-H</div>
+          <div class="crater-datetime-chooser-button crater-datetime-time-pm" data-minutes="-10">-10</div>
+          <div class="crater-datetime-chooser-button crater-datetime-time-mm" data-minutes="-1">-1</div>
+        </div>
+      </div>   
+    </div>   
+  </div>    
+
+
+</template>
+
+
+

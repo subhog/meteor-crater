@@ -1,0 +1,25 @@
+<template name="__crater_template__field_multi__">
+
+  <div class="crater-field-header-menu">
+    <span class="crater-form-button crater-field-multi-add-button">+ Add</span>
+  </div>
+
+  {{#each this.array}}
+    <div
+      class="crater-field-box crater-form-multi-item {{#if klass}} crater-form-{{klass}} {{/if}}"
+      data-idx="{{idx}}"
+      data-prefix="{{prefix}}"
+      data-param="{{param}}"
+    >
+      <div class="crater-field-header-menu-right">
+        <span class="crater-form-button crater-field-multi-remove-button">&times; Remove</span>
+      </div>
+      {{> __crater_template__form__ this.array}}
+    </div>
+
+  {{/each}}
+
+  
+</template>
+
+

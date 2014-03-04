@@ -6,6 +6,10 @@ Crater._items['crater-remover'] = function(element) {
   if(element.is('.crater')) return;
   element.addClass('crater');
 
+  if(!element.data('label')) {
+    element.data('label', 'REMOVE');
+  }
+
   element.click(function(event) {
     if(element.is('.crater-activated')) {
       element.trigger('confirm');
@@ -13,7 +17,7 @@ Crater._items['crater-remover'] = function(element) {
       element.addClass('crater-activated');
       element.addClass('crater-remover-activated');
       element.data('craterOriginalHtml', element.html());
-      element.html('REMOVE');
+      element.html(element.data('label'));
 
       setTimeout(function() {
         element.removeClass('crater-activated');

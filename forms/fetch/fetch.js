@@ -1,6 +1,7 @@
 
 var injectField = function(target, form, prefix, field, dbg) {
-
+  // console.log("INJF", arguments);
+  
   if(field.type === 'group') {
     _.each(field.array, function(f) {
       injectField(target, form, prefix, f);
@@ -25,8 +26,9 @@ var injectField = function(target, form, prefix, field, dbg) {
 
     // console.log("FETCHING", field);
     _.each(field.values, function(val) {
-      var f = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '-' + Crater.forms.undot(val.value) + '');
-      // console.log(f, f.is(':checked'));
+      var str = '#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '-' + Crater.forms.undot(val.value) + '';
+      var f = $(form).find(str);
+      // console.log("RADIO DOT", str, f, f.is(':checked'));
       if(f.is(':checked')) {
         target[field.param] = val.value;
       }
@@ -35,6 +37,8 @@ var injectField = function(target, form, prefix, field, dbg) {
   } else if(field.type === 'checkbox') {
     target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '').is(':checked');
   // } else if(field.type === 'label') {
+  } else if(field.type === 'info') {
+    /* Ignore this field */
   } else {
     target[field.param] = $(form).find('#crater-form-' + prefix + '-' + Crater.forms.undot(field.param) + '').val();
     if(field.type === 'datetime') {
@@ -47,8 +51,9 @@ var injectField = function(target, form, prefix, field, dbg) {
 };
 
 
-
+/* Fetch data object from the form state */
 Crater.forms.fetch = function(form, map, options) {
+  // console.log("FETCH VALUE");
 
   var value = {};
 

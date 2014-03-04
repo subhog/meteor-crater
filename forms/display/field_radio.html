@@ -1,0 +1,22 @@
+<template name="__crater_template__field_radio__">
+
+  {{#each values}}
+    <div class="crater-form-radio-option">
+      <input type="radio"
+              class="crater-field-trigger"
+              name="crater-form-{{prefix}}-{{craterUndot param}}"
+              id="crater-form-{{prefix}}-{{craterUndot param}}-{{craterUndot value}}"
+              value="{{value}}"
+              {{#if checked}} checked {{/if}}
+      >
+      <label for="crater-form-{{prefix}}-{{craterUndot param}}-{{craterUndot value}}"
+              value="{{value}}"
+      >
+        {{label}}
+      </label>
+    </div>
+  {{/each}}
+  
+</template>
+
+

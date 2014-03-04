@@ -1,0 +1,36 @@
+<template name="__crater_template__alert__">
+
+  <div class="crater-alert-box">
+
+    {{#if titleOrCloser}}
+      <div class="crater-alert-header">
+        {{#if title}}
+          {{{title}}}
+        {{/if}}
+        {{#if closer}}
+          <span class="crater-alert-closer">&times;</span>
+        {{/if}}
+      </div>
+    {{/if}}
+      
+    <div class="crater-alert-body">
+      {{{message}}}
+      {{#if prompt}}
+        <div><input class="crater-alert-prompt" type="text" value="{{value}}"/></div>
+      {{/if}}
+    </div>
+
+    <div class="crater-alert-footer">
+      {{#if cancel}}
+        <span class="crater-alert-button crater-alert-button-cancel">{{cancel}}</span>
+      {{/if}}
+      <span class="crater-alert-button crater-alert-button-action">{{ok}}</span>
+    </div>
+
+  </div>
+
+
+</template>
+
+
+

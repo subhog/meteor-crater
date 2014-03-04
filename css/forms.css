@@ -1,6 +1,114 @@
 
 
+.crater-field-box {
+  /*padding: 0px 20px;*/
+  margin: 20px;
+}
 
+.crater-field-label {
+  display: inline-block;
+  vertical-align: top;
+  /*border: 1px solid rgba(200,0,250,0.5);*/
+  width: 20%;
+
+  text-align: right;
+}
+
+.crater-field-info {
+  white-space: pre-line;
+
+  font-size: 12px;
+  color: #2850c0;
+  /*color: #001080;*/
+}
+
+.crater-field-warning {
+  white-space: pre-line;
+
+  font-size: 12px;
+  color: #c00000;
+}
+
+.crater-field-body {
+  display: inline-block;
+  vertical-align: top;
+  /*border: 1px solid rgba(200,0,0,0.5);*/
+  margin-left: 2.5%;
+  width: 75%;
+}
+
+.crater-field-pre {
+  white-space: pre-line;
+}
+
+.crater-form-group {
+  border-top: 1px solid rgba(255,255,255,0.5);
+  margin: 10px 0px 60px 0px;
+}
+
+.crater-form-group-title {
+  padding: 10px 20px;
+}
+
+.crater-form-radio-option input {
+  display: inline;
+  vertical-align: middle;
+}
+
+.crater-form-radio-option label {
+  display: inline;
+  vertical-align: middle;
+}
+
+
+.crater-field-image-box {
+  /*background: #303030;*/
+  /*padding: 10px;*/
+}
+
+.crater-form-multi-item {
+  background: #101010;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+
+.crater-field-image-preview {
+  max-width: 300px;
+  max-height: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.crater-form-button {
+  display: inline-block;
+  background: #303030;
+  padding: 3px 10px;
+  /*border-radius: 100px;*/
+  cursor: default;
+}
+
+.crater-form-button:hover {
+  background: #404040;
+}
+
+.crater-field-image-menu {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px 20px;
+}
+
+.crater-field-header-menu-right {
+  text-align: right;
+}
+
+/*
+.crater-form-textarea {
+  width: 95%;
+  height: 80px;
+}
+*/
+
+/*
 .crater-field-box {
   box-shadow: 0px 0px 3px rgba(0,0,0,0.125);
   padding: 20px;
@@ -43,7 +151,4 @@
 
 
 
-.crater-field-image-preview {
-  max-width: 300px;
-  max-height: 200px;
-}
+*/

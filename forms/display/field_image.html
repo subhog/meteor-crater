@@ -1,0 +1,22 @@
+<template name="__crater_template__field_image__">
+
+
+
+  <div class="crater-field-image-box">
+
+    {{#if src}}<image class="crater-field-image-preview" src="{{src}}"/>{{/if}}
+    <input type="hidden"
+            id="crater-form-{{prefix}}-{{craterUndot param}}"
+            value="{{craterTextValue value}}"
+    />
+
+    <div class="crater-field-image-menu">
+      <span class="crater-form-button crater-field-image-change-button">Change</span>
+      <span class="crater-form-button crater-remover crater-field-image-clear-button" data-label="Clear">&times;</span>
+    </div>
+
+  </div>
+  
+</template>
+
+

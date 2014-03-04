@@ -1,0 +1,44 @@
+<template name="__crater_template__form__">
+
+  {{#each this}}
+
+
+    {{#if group}}
+
+      <div
+          class="crater-field-box crater-form-group {{#if klass}} crater-form-{{klass}} {{/if}} {{#if boxClass}}{{boxClass}}{{/if}}"
+          data-idx="{{idx}}"
+          data-prefix="{{prefix}}"
+          data-param="{{param}}"
+      >
+        <div class="crater-form-group-title">{{label}}</div>
+        {{selectBody}}
+      </div>
+
+
+    {{else}}
+
+      <div
+          class="crater-field-box {{#if klass}} crater-form-{{klass}} {{/if}} {{#if boxClass}}{{boxClass}}{{/if}}"
+          data-idx="{{idx}}"
+          data-prefix="{{prefix}}"
+          data-param="{{param}}"
+      >
+        <div class="crater-field-label">
+          {{label}}
+          {{#if info}}<div class="crater-field-info">{{info}}</div>{{/if}}
+        </div>
+        <div class="crater-field-body">
+          {{selectBody}}
+        </div>
+      </div>
+
+    {{/if}}
+
+    
+  {{/each}}
+
+</template>
+
+
+

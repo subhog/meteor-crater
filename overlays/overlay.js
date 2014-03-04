@@ -23,6 +23,9 @@ Crater._drawOverlay = function(html, options, callback) {
       jdiv.addClass(options.overlayClass);
     }
   }
+  if(options.overlayStyle) {
+    jdiv.css(options.overlayStyle);
+  }
   jdiv.append(frag);
   jdiv.hide();
   if(!options.modal) {

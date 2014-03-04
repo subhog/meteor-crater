@@ -13,9 +13,13 @@ Crater.forms.inject = function(formMap, data, params) {
       values: f.values,
       prefix: params.prefix || '',
       filters: f.filters,
+      validate: f.validate,
+      boxClass: f.boxClass,
+      info: f.info,
     };
 
     if(f.type === 'group') {
+      field.group = true;
       field.array = Crater.forms.inject(f.array, data, params);
     } else if(f.type === 'multi') {
 
@@ -27,6 +31,7 @@ Crater.forms.inject = function(formMap, data, params) {
           label: '',
           param: f.param,
           type: 'multiItem',
+          group: true,
           value: '',
           idx: idx,
           klass: params.prefix + '-' + Crater.forms.undot(f.param) || '',
@@ -52,6 +57,8 @@ Crater.forms.inject = function(formMap, data, params) {
     } else if(f.type === 'radio') {
       var val = Crater.forms.getValue(data, f.param);
       _.each(field.values, function(v) {
+        v.prefix = field.prefix;
+        v.param = field.param;
         if(v.value === val) {
           v.checked = true;
         } else {
@@ -60,6 +67,8 @@ Crater.forms.inject = function(formMap, data, params) {
       });
     } else if(f.type === 'checkbox') {
       field.value = Crater.forms.getValue(data, f.param);
+    } else if(f.type === 'info') {
+      field.content = f.content;
     } else {
       field.value = Crater.forms.getValue(data, f.param);
     }
